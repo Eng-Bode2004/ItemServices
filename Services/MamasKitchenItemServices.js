@@ -3,7 +3,7 @@ const MamasKitchenItem = require('../Models/MamasKitchenItem');
 class MamasKitchenServices {
     async createMamasKitchenItem(itemData) {
         try {
-            const { name, description, price, shopId, imageId, spicy } = itemData;
+            const { name, description, price, shopId, imageUrl, spicy } = itemData;
 
             // Basic validation
             if (!name || !price || !shopId) {
@@ -16,7 +16,7 @@ class MamasKitchenServices {
                 description: description || '',
                 price,
                 shopId,
-                imageId,
+                imageUrl,
                 spicy: spicy || false
             });
 

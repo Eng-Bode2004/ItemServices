@@ -21,9 +21,8 @@ const MamasKitchenItemSchema = new mongoose.Schema({
         ref: 'Shop',
     },
 
-    imageId:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Image',
+    imageUrl:{
+        type: String,
     },
 
     isAvailable:{
