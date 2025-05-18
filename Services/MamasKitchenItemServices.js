@@ -25,6 +25,19 @@ class MamasKitchenServices {
             throw error;
         }
     }
+
+    async getItemsByShopId(shopId) {
+        try {
+            if (!shopId) {
+                return Promise.reject(new Error("shopId is required."));
+            }
+
+            const items = await MamasKitchenItem.find({ shopId });
+            return items;
+        } catch (error) {
+            throw error;
+        }
+    }
 }
 
 module.exports = new MamasKitchenServices();
